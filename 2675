@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    int t;
+    scanf("%d", &t);
+    
+    for (int i = 0; i < t; i++){
+        int n;
+        char w[21];
+        scanf("%d %s", &n, w);
+        
+        int len = strlen(w);
+        
+        for(int j = 0; j < len; j++){
+            for(int k = 0; k < n; k++){
+                printf("%c", w[j]);
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
