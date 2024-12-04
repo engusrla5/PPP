@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int n;
+char str[1000] = {'\0'};
+char og[37] = {'\0'};
+int ans = 0;
+
+int main(){
+	
+    for(int i = 0, j = 48; i <= 35; i++){
+		og[i] = i + j;
+			if(i + j == 57)
+				j=55;
+	}
+
+    scanf("%s %d", str, &n);
+    
+    int len = strlen(str);
+	
+    for(int i = 0; i < len; i++)
+		for(int j = 0; j < 37; j++)
+			if(str[i] == og[j]){
+				int num = 1;
+				for(int k=0; k<(len - i - 1); k++)
+					num *= n;
+				ans += (num * j);
+			}
+	
+	printf("%d\n", ans);
+	
+	return 0;
+}
