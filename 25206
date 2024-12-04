@@ -4,10 +4,7 @@ char subject[50];
 char major[2];
 
 int main(){
-    float score, ans, sumScore, majorScore;
-    char subject[50];
-    char major[2];
-
+    
         for (int i = 0; i < 20; i++){
         scanf("%s %f %s", &subject, &score, &major);
 
