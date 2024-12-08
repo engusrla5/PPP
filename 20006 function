@@ -16,7 +16,7 @@ void addplayerroom(Player player, Room rooms[], int* room_count, int max_players
 void roomstatus(Room room, int max_players);
 void sortroom(Room* room);
 
-int main(void) {
+int main() {
     Player player;
     int p, m;
     scanf("%d %d", &p, &m);
